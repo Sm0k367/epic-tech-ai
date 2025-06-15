@@ -1,0 +1,16 @@
+<section id="style-system" class="content-section">
+  <h2 style="text-align: center;">Style System</h2>
+  <p style="text-align: center; max-width: 700px; margin: 1rem auto;">
+    Select a style preset to guide the output’s look, feel, or sound. You can mix and match styles in future versions.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+    <button class="btn-outline" onclick="selectStyle('photorealistic')">📸 Photorealistic</button>
+    <button class="btn-outline" onclick="selectStyle('anime')">🎌 Anime</button>
+    <button class="btn-outline" onclick="selectStyle('cinematic')">🎬 Cinematic</button>
+    <button class="btn-outline" onclick="selectStyle('watercolor')">🖌️ Watercolor</button>
+    <button class="btn-outline" onclick="selectStyle('ambient')">🌌 Ambient</button>
+  </div>
+
+  <div id="selected-style" style="text-align: center; margin-top: 2rem; font-weight: bold;"></div>
+</section>
