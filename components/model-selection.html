@@ -1,0 +1,16 @@
+<section id="model-selection" class="content-section">
+  <h2 style="text-align: center;">Model Selection</h2>
+  <p style="text-align: center; max-width: 700px; margin: 1rem auto;">
+    Choose the AI model best suited for your creative goal. Some models specialize in images, others in music or motion.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+    <button class="btn-outline" onclick="selectModel('sdxl')">🖼️ Stable Diffusion XL</button>
+    <button class="btn-outline" onclick="selectModel('dalle')">🎨 DALL·E 3</button>
+    <button class="btn-outline" onclick="selectModel('musicgen')">🎵 MusicGen</button>
+    <button class="btn-outline" onclick="selectModel('sora')">🎥 Sora</button>
+    <button class="btn-outline" onclick="selectModel('audiocraft')">🔊 AudioCraft</button>
+  </div>
+
+  <div id="selected-model" style="text-align: center; margin-top: 2rem; font-weight: bold;"></div>
+</section>
