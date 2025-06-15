@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Epic Tech AI - Modular AI Generation Platform</title>
+  <meta name="description" content="Create, remix, and evolve AI-generated images, video, and audio with Epic Tech AI — the ultimate modular AI generation system.">
+  <meta name="keywords" content="AI generation, text-to-image, text-to-video, modular AI, Epic Tech AI, generative media, prompt engineering, AI remix, creative AI">
+  <meta property="og:title" content="Epic Tech AI - Modular AI Generation Platform"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://epictech.ai"/>
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg"/>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- SVG Gradient Definition -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7928ca" />
+        <stop offset="100%" stop-color="#ff0080" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Component Containers -->
+  <div id="header-container"></div>
+  <div id="hero-container"></div>
+  <div id="features-container"></div>
+  <div id="how-it-works-container"></div>
+  <div id="prompt-engineering-container"></div>
+  <div id="model-selection-container"></div>
+  <div id="style-system-container"></div>
+  <div id="parameter-control-container"></div>
+  <div id="image-refinement-container"></div>
+  <div id="variation-engine-container"></div>
+  <div id="integration-container"></div>
+  <div id="ethical-ai-container"></div>
+  <div id="demo-container"></div>
+  <div id="benefits-container"></div>
+  <div id="cta-container"></div>
+  <div id="footer-container"></div>
+
+  <!-- JavaScript Files -->
+  <script src="js/config.js"></script>
+  <script src="js/component-loader.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/prompt-engineering.js"></script>
+  <script src="js/model-selection.js"></script>
+  <script src="js/style-system.js"></script>
+  <script src="js/parameter-control.js"></script>
+  <script src="js/image-refinement.js"></script>
+  <script src="js/variation-engine.js"></script>
+  <script src="js/integration.js"></script>
+  <script src="js/ethical-ai.js"></script>
+  <script src="js/demo.js"></script>
+
+  <!-- Component Loader -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const components = [
+        { path: 'components/header.html', target: '#header-container' },
+        { path: 'components/hero.html', target: '#hero-container' },
+        { path: 'components/features.html', target: '#features-container' },
+        { path: 'components/how-it-works.html', target: '#how-it-works-container' },
+        { path: 'components/prompt-engineering.html', target: '#prompt-engineering-container' },
+        { path: 'components/model-selection.html', target: '#model-selection-container' },
+        { path: 'components/style-system.html', target: '#style-system-container' },
+        { path: 'components/parameter-control.html', target: '#parameter-control-container' },
+        { path: 'components/image-refinement.html', target: '#image-refinement-container' },
+        { path: 'components/variation-engine.html', target: '#variation-engine-container' },
+        { path: 'components/integration.html', target: '#integration-container' },
+        { path: 'components/ethical-ai.html', target: '#ethical-ai-container' },
+        { path: 'components/demo.html', target: '#demo-container' },
+        { path: 'components/benefits.html', target: '#benefits-container' },
+        { path: 'components/cta.html', target: '#cta-container' },
+        { path: 'components/footer.html', target: '#footer-container' }
+      ];
+
+      const LOAD_DELAY = 100;
+      let loadPromise = Promise.resolve();
+
+      components.forEach((component, index) => {
+        loadPromise = loadPromise
+          .then(() => new Promise(resolve => setTimeout(resolve, index * LOAD_DELAY)))
+          .then(() => loadComponent(component.path, component.target))
+          .catch(error => console.error(`Failed to load ${component.path}`, error));
+      });
+
+      loadPromise.then(() => {
+        if (typeof initializeApp === 'function') initializeApp();
+      });
+    });
+  </script>
+</body>
+</html>
